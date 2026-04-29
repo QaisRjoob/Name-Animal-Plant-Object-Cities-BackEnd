@@ -272,6 +272,7 @@ const confirmLetter = (room, io, letter) => {
  */
 const startPlaying = (room, io) => {
   room.gameState = STATES.PLAYING;
+  room.pauseRequested = false; // reset any pause left over from the previous round
   room._roundStartTime = Date.now();
   room._stopAllowed = false;
 
