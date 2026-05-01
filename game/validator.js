@@ -6,7 +6,7 @@ const CATEGORIES = ['name', 'plant', 'animal', 'object', 'cities'];
 const validateAnswer = (answer, letter) => {
   if (!answer || typeof answer !== 'string') return false;
   const trimmed = answer.trim();
-  if (!trimmed) return false;
+  if (!trimmed || trimmed.length < 2) return false;
   return trimmed[0].toUpperCase() === letter.toUpperCase();
 };
 
